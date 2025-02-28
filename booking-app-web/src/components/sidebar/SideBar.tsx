@@ -5,6 +5,7 @@ import {
   ListItemText,
   Divider,
   ListItemIcon,
+  Box,
 } from "@mui/material";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 
@@ -16,8 +17,16 @@ const Sidebar: React.FC = () => {
       sx={{ "& .MuiDrawer-paper": { backgroundColor: "#1976d2" } }}
     >
       <List>
-        <ListItemButton>
-          <ListItemText primary="LOGO" />
+        <ListItemButton sx={{ justifyContent: "center" }}>
+          <Box
+            component="img"
+            src="/logo.png"
+            alt="logo"
+            sx={{
+              width: 65,
+              height: 65,
+            }}
+          />
         </ListItemButton>
         <ListItemButton>
           <ListItemText primary="HoHo Canada Ltd." />
