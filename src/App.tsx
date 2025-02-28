@@ -1,11 +1,12 @@
-import Siderbar from "./components/sidebar/SideBar";
+import QueryProvider from './components/providers/QueryProvider'
+import Siderbar from './components/sidebar/SideBar'
 
 function App() {
-  return (
-    <div>
-      <Siderbar />
-    </div>
-  );
+	return (
+		<QueryProvider>
+			<Siderbar />
+		</QueryProvider>
+	)
 }
 
-export default App;
+export default App
