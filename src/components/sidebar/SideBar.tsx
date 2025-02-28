@@ -1,14 +1,44 @@
-import { List, ListItemButton, ListItemText, Divider, ListItemIcon, Box } from '@mui/material'
-import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft'
-import { sidebarItems } from './sidebarItems'
+import {
+	List,
+	ListItem,
+	ListItemButton,
+	ListItemText,
+	Divider,
+	ListItemIcon,
+	Box,
+	Stack
+} from '@mui/material'
+import { accountSection } from './constants'
 
 import type { FC } from 'react'
 import LeftDrawer from '../layouts/LeftDrawer'
+import SideBarItem from './components/SideBarItem'
 
 const Sidebar: FC = () => {
 	return (
-		<LeftDrawer>
-			<List>
+		<LeftDrawer drawerWidth={400}>
+			{/* Company Info Display */}
+			<Box></Box>
+			<Divider />
+			{/* Feature List */}
+			{/* <FeatureList /> */}
+			<Box sx={{ flex: 1, border: '2px solid green' }}></Box>
+			{/* Footer */}
+			<Divider />
+			<Box component='footer'>
+				<List sx={{ width: '100%' }} disablePadding>
+					{accountSection.map(item => (
+						<SideBarItem item={item} />
+					))}
+					{/* 				
+					<ListItem aria-label={t('auth.signOut')} component='div' disablePadding>
+						<LogoutButton />
+					</ListItem> */}
+				</List>
+				<Divider />
+				<SideBarItem item={{ title: 'Collapse sidebar', iconName: 'arrowLeft' }} />
+			</Box>
+			{/* <List>
 				<ListItemButton sx={{ justifyContent: 'center' }}>
 					<Box
 						component='img'
@@ -62,7 +92,7 @@ const Sidebar: FC = () => {
 					<KeyboardDoubleArrowLeftIcon />
 					<ListItemText primary='Collapse sidebar' />
 				</ListItemIcon>
-			</ListItemButton>
+			</ListItemButton> */}
 		</LeftDrawer>
 	)
 }

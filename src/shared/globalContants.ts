@@ -11,7 +11,7 @@ export const defaultTheme = createTheme(
 			}
 		},
 		palette: {
-			mode: 'light',
+			mode: 'dark',
 			primary: {
 				main: colors.brandPrimary
 			},
@@ -22,7 +22,7 @@ export const defaultTheme = createTheme(
 				default: colors.white
 			},
 			text: {
-				primary: colors.black
+				primary: colors.white
 			}
 		},
 		components: {
