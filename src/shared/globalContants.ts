@@ -19,7 +19,7 @@ export const defaultTheme = createTheme(
 				main: colors.brandSecondary
 			},
 			background: {
-				default: colors.brandPrimary
+				default: colors.white
 			},
 			text: {
 				primary: colors.black

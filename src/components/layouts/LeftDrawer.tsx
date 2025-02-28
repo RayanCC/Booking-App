@@ -4,22 +4,27 @@ import type { FC, ReactNode } from 'react'
 
 type LeftDrawerProps = {
 	children?: ReactNode
+	drawerWidth?: number
 }
 
-const LeftDrawer: FC<LeftDrawerProps> = ({ children = null }) => {
+const LeftDrawer: FC<LeftDrawerProps> = ({ children = null, drawerWidth = 200 }) => {
 	return (
 		<Drawer
 			variant='permanent'
 			anchor='left'
+			slotProps={{
+				paper: {
+					elevation: 1,
+					sx: {
+						width: drawerWidth,
+						boxSizing: 'border-box',
+						backgroundColor: theme => theme.palette.primary.main
+					}
+				}
+			}}
 			sx={{
-				width: 200
-				// '& .MuiDrawer-paper': {
-				// 	width: 200,
-				// 	backgroundColor: '#1a237e'
-				// },
-				// '& .MuiListItemText-root': {
-				// 	color: 'white'
-				// }
+				width: drawerWidth,
+				flexShrink: 0
 			}}
 		>
 			{children}
