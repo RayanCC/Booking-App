@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles'
 import colors from './colors'
+import { orange } from '@mui/material/colors'
 
 export const defaultTheme = createTheme(
 	{
@@ -23,6 +24,7 @@ export const defaultTheme = createTheme(
 			},
 			text: {
 				primary: colors.white
+				// primary: '#F40'
 			}
 		},
 		components: {

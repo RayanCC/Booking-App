@@ -17,7 +17,7 @@ const SideBarItem: FC<SideBarItemProps> = ({ item }) => {
 					primary={title}
 					slotProps={{
 						primary: {
-							sx: { fontWeight: 'bold' }
+							sx: { fontWeight: 'bold', ml: theme => theme.spacing(3) } // spacing text margin left 8*3 px
 						}
 					}}
 				/>
