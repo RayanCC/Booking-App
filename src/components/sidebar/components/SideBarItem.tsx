@@ -10,7 +10,7 @@ const SideBarItem: FC<SideBarItemProps> = ({ item }) => {
 	const { title, iconName, path = '/' } = item
 
 	return (
-		<ListItem component='div' disablePadding sx={{ px: 6, py: 1 }}>
+		<ListItem component='div' disablePadding sx={{ px: 3, py: 0.2 }}>
 			<ListItemButton>
 				<ListItemIcon sx={{ color: 'white', fontSize: 28 }}>{iconMapping[iconName]}</ListItemIcon>
 				<ListItemText

@@ -9,7 +9,7 @@ import {
 	Stack,
 	Typography
 } from '@mui/material'
-import { requestSection } from './constants'
+import { mainSection, requestSection } from './constants'
 import { accountSection } from './constants'
 import { CompanyHeader } from './components/CompanyHeader'
 
@@ -33,7 +33,13 @@ const Sidebar: FC = () => {
 			</Box>
 			{/* <FeatureList /> */}
 
-			<Box sx={{ flex: 1, border: '2px solid green' }}></Box>
+			<Box sx={{ flex: 1, border: '2px solid green' }}>
+				<List sx={{ width: '100%' }} disablePadding>
+					{mainSection.map(item => (
+						<SideBarItem item={item} />
+					))}
+				</List>
+			</Box>
 
 			{/* Footer */}
 			<Divider />
