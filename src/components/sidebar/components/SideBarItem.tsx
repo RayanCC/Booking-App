@@ -17,7 +17,11 @@ const SideBarItem: FC<SideBarItemProps> = ({ item }) => {
 					primary={title}
 					slotProps={{
 						primary: {
-							sx: { fontWeight: 'bold', ml: theme => theme.spacing(3) } // spacing text margin left 8*3 px
+							sx: {
+								fontWeight: 'bold',
+								ml: theme => theme.spacing(3),
+								color: title === 'Default Entity' ? 'green' : 'inherit'
+							} // spacing text margin left 8*3 px
 						}
 					}}
 				/>

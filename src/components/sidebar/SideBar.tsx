@@ -9,6 +9,7 @@ import {
 	Stack,
 	Typography
 } from '@mui/material'
+import { requestSection } from './constants'
 import { accountSection } from './constants'
 import { CompanyHeader } from './components/CompanyHeader'
 
@@ -23,8 +24,17 @@ const Sidebar: FC = () => {
 			<CompanyHeader />
 			<Divider />
 			{/* Feature List */}
+			<Box component='header'>
+				<List sx={{ width: '100%' }} disablePadding>
+					{requestSection.map(item => (
+						<SideBarItem item={item} />
+					))}
+				</List>
+			</Box>
 			{/* <FeatureList /> */}
+
 			<Box sx={{ flex: 1, border: '2px solid green' }}></Box>
+
 			{/* Footer */}
 			<Divider />
 			<Box component='footer'>

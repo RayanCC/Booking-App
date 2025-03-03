@@ -76,6 +76,11 @@ import { ReactNode } from 'react'
 // 	{ title: 'Report&KPIs', icon: FlagCircleIcon }
 // ]
 
+export const requestSection: SideBarItem[] = [
+	{ title: 'Default Entity' },
+	{ title: 'Request', iconName: 'assignment' }
+]
+
 export const accountSection: SideBarItem[] = [
 	{ title: 'Rayan Chen', iconName: 'account' },
 	{ title: 'Admin Setting', iconName: 'settings' }
