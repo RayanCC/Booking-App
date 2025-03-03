@@ -75,6 +75,7 @@ import { ReactNode } from 'react'
 // 	{ title: 'Users', icon: GroupIcon },
 // 	{ title: 'Report&KPIs', icon: FlagCircleIcon }
 // ]
+
 export const accountSection: SideBarItem[] = [
 	{ title: 'Rayan Chen', iconName: 'account' },
 	{ title: 'Admin Setting', iconName: 'settings' }

@@ -6,9 +6,11 @@ import {
 	Divider,
 	ListItemIcon,
 	Box,
-	Stack
+	Stack,
+	Typography
 } from '@mui/material'
 import { accountSection } from './constants'
+import { CompanyHeader } from './components/CompanyHeader'
 
 import type { FC } from 'react'
 import LeftDrawer from '../layouts/LeftDrawer'
@@ -18,7 +20,7 @@ const Sidebar: FC = () => {
 	return (
 		<LeftDrawer drawerWidth={400}>
 			{/* Company Info Display */}
-			<Box></Box>
+			<CompanyHeader />
 			<Divider />
 			{/* Feature List */}
 			{/* <FeatureList /> */}
