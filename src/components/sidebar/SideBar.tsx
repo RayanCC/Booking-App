@@ -24,93 +24,58 @@ const Sidebar: FC = () => {
 			<CompanyHeader />
 			<Divider />
 			{/* Feature List */}
-			<Box component='header'>
-				<List sx={{ width: '100%' }} disablePadding>
-					{requestSection.map(item => (
-						<SideBarItem item={item} />
-					))}
-				</List>
-			</Box>
-			{/* <FeatureList /> */}
-
-			<Box sx={{ flex: 1, border: '2px solid green' }}>
-				<List sx={{ width: '100%' }} disablePadding>
-					{mainSection.map(item => (
-						<SideBarItem item={item} />
-					))}
-				</List>
-			</Box>
-
-			{/* Footer */}
-			<Divider />
-			<Box component='footer'>
-				<List sx={{ width: '100%' }} disablePadding>
-					{accountSection.map(item => (
-						<SideBarItem item={item} />
-					))}
-					{/* 				
-					<ListItem aria-label={t('auth.signOut')} component='div' disablePadding>
-						<LogoutButton />
-					</ListItem> */}
-				</List>
-				<Divider />
-				<SideBarItem item={{ title: 'Collapse sidebar', iconName: 'arrowLeft' }} />
-			</Box>
-			{/* <List>
-				<ListItemButton sx={{ justifyContent: 'center' }}>
-					<Box
-						component='img'
-						src='/logo.png'
-						alt='logo'
-						sx={{
-							width: 65,
-							height: 65
-						}}
-					/>
-				</ListItemButton>
-				<ListItemButton sx={{ justifyContent: 'center', textAlign: 'center' }}>
-					<ListItemText primary='HoHo Canada Ltd.' />
-				</ListItemButton>
-				<Divider />
-
-				{sidebarItems.map((section, index) => (
-					<Box key={index} mb={2}>
-						{section.items.map(({ text, icon: Icon, color }) => (
-							<ListItemButton
-								key={text}
-								sx={{
-									display: 'flex',
-									alignItems: 'center',
-									justifyContent: 'center',
-									mb: text === 'Report&KPIs' ? 6 : 0
-								}}
-							>
-								{Icon && <Icon sx={{ color: 'white' }} />}{' '}
-								<ListItemText
-									primary={text}
-									sx={{
-										minWidth: 'auto',
-										display: 'flex',
-										textAlign: 'center',
-										alignItems: 'center',
-										justifyContent: 'center'
-									}}
-									slotProps={{
-										primary: { style: { color: color || 'white' } }
-									}}
-								/>
-							</ListItemButton>
+			<Box
+				sx={{
+					display: 'flex',
+					flexDirection: 'column',
+					flex: '1',
+					overflowY: 'hidden',
+					maxHeight: 'calc(100vh - 150px)'
+				}}
+			>
+				<Box
+					component='header'
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						flex: '1',
+						overflowY: 'auto',
+						maxHeight: 'calc(100vh - 150px)',
+						paddingBottom: '40px'
+					}}
+				>
+					<List sx={{ width: '100%' }} disablePadding>
+						{requestSection.map(item => (
+							<SideBarItem item={item} />
 						))}
-					</Box>
-				))}
-			</List>
-			<Divider />
-			<ListItemButton>
-				<ListItemIcon>
-					<KeyboardDoubleArrowLeftIcon />
-					<ListItemText primary='Collapse sidebar' />
-				</ListItemIcon>
-			</ListItemButton> */}
+					</List>
+				</Box>
+				{/* <FeatureList /> */}
+
+				<Box sx={{ flexGrow: 1 }}>
+					<List sx={{ width: '100%' }} disablePadding>
+						{mainSection.map(item => (
+							<SideBarItem item={item} />
+						))}
+					</List>
+				</Box>
+
+				{/* Footer */}
+				<Divider />
+				<Box component='footer'>
+					<List sx={{ width: '100%' }} disablePadding>
+						{accountSection.map(item => (
+							<SideBarItem item={item} />
+						))}
+						{/*
+					<ListItem aria-label={t('auth.signOut')} component='div' disablePadding>
+					<LogoutButton />
+					</ListItem> */}
+					</List>
+					<Divider />
+					<SideBarItem item={{ title: 'Collapse sidebar', iconName: 'arrowLeft' }} />
+				</Box>
+			</Box>
 		</LeftDrawer>
 	)
 }
