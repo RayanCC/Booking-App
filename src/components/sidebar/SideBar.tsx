@@ -24,16 +24,41 @@ const Sidebar: FC = () => {
 			<CompanyHeader />
 			<Divider />
 			{/* Feature List */}
+			<Box sx={{ border: '2px solid white', flex: 2, overflowY: 'scroll' }}>
+				<List sx={{ width: '100%' }} disablePadding>
+					{mainSection.map(item => (
+						<SideBarItem item={item} />
+					))}
+				</List>
+			</Box>
+			{/* Footer */}
+			<Divider />
+			<Box component='footer' sx={{ border: '2px solid yellow', flex: 1 }}>
+				<List sx={{ width: '100%' }} disablePadding>
+					{accountSection.map(item => (
+						<SideBarItem item={item} />
+					))}
+					{/*
+					<ListItem aria-label={t('auth.signOut')} component='div' disablePadding>
+					<LogoutButton />
+					</ListItem> */}
+				</List>
+				<Divider />
+				<SideBarItem item={{ title: 'Collapse sidebar', iconName: 'arrowLeft' }} />
+			</Box>
 			<Box
-				sx={{
-					display: 'flex',
-					flexDirection: 'column',
-					flex: '1',
-					overflowY: 'hidden',
-					maxHeight: 'calc(100vh - 150px)'
-				}}
+				sx={
+					{
+						// display: 'flex',
+						// flexDirection: 'column',
+						// flex: 1,
+						// overflowY: 'hidden',
+						// maxHeight: 'calc(100% - 150px)',
+						// border: '3px solid green'
+					}
+				}
 			>
-				<Box
+				{/* <Box
 					component='header'
 					sx={{
 						display: 'flex',
@@ -49,32 +74,7 @@ const Sidebar: FC = () => {
 							<SideBarItem item={item} />
 						))}
 					</List>
-				</Box>
-				{/* <FeatureList /> */}
-
-				<Box sx={{ flexGrow: 1 }}>
-					<List sx={{ width: '100%' }} disablePadding>
-						{mainSection.map(item => (
-							<SideBarItem item={item} />
-						))}
-					</List>
-				</Box>
-
-				{/* Footer */}
-				<Divider />
-				<Box component='footer'>
-					<List sx={{ width: '100%' }} disablePadding>
-						{accountSection.map(item => (
-							<SideBarItem item={item} />
-						))}
-						{/*
-					<ListItem aria-label={t('auth.signOut')} component='div' disablePadding>
-					<LogoutButton />
-					</ListItem> */}
-					</List>
-					<Divider />
-					<SideBarItem item={{ title: 'Collapse sidebar', iconName: 'arrowLeft' }} />
-				</Box>
+				</Box> */}
 			</Box>
 		</LeftDrawer>
 	)

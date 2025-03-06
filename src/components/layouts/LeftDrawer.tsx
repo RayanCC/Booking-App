@@ -18,13 +18,13 @@ const LeftDrawer: FC<LeftDrawerProps> = ({ children = null, drawerWidth = 200 })
 					sx: {
 						width: drawerWidth,
 						boxSizing: 'border-box',
-						backgroundColor: theme => theme.palette.primary.main
+						backgroundColor: theme => theme.palette.primary.main,
+						maxHeight: '100vh',
 					}
 				}
 			}}
 			sx={{
-				width: drawerWidth,
-				flexShrink: 0
+				width: drawerWidth
 			}}
 		>
 			{children}

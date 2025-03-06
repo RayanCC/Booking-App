@@ -17,7 +17,6 @@ import type { SideBarItem } from './types'
 import { ReactNode } from 'react'
 
 export const requestSection: SideBarItem[] = [
-	{ title: 'Default Entity' },
 	{ title: 'Request', iconName: 'assignment' }
 ]
 
